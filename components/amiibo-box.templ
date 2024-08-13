@@ -1,0 +1,20 @@
+package components
+
+import "github.com/ghuerta-globant/amiibo_templ/handler"
+
+templ AmiiboBox(amiibo handler.Amiibo) {
+	<article class="flex max-w-xl flex-col items-start justify-between p-4 border border-gray-500 rounded-lg">
+		<img src={ amiibo.Image } alt={ amiibo.Name } class="mx-auto w-20"/>
+		<div class="group relative w-full">
+			<h3 class="mt-3 text-lg pt-2 font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+				<span class="absolute inset-0">{ amiibo.Name }</span>
+			</h3>
+			<div class="line-clamp-3 text-sm leading-6 text-gray-600">
+				{ amiibo.GameSeries }
+			</div>
+			<div class="line-clamp-3 text-sm leading-6 text-gray-600">
+				{ amiibo.Release.AU }
+			</div>
+		</div>
+	</article>
+}

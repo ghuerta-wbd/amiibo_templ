@@ -1,0 +1,13 @@
+package components
+
+import "github.com/ghuerta-globant/amiibo_templ/handler"
+
+templ RowContainer() {
+	<div class="grid gap-x-2 gap-y-2 border-t border-gray-200 sm:mt-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+		if len(handler.GetData()) > 0 {
+			for _, item := range handler.GetData() {
+				@AmiiboBox(item)
+			}
+		}
+	</div>
+}

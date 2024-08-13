@@ -1,0 +1,19 @@
+package main
+
+import "github.com/ghuerta-globant/amiibo_templ/components"
+
+templ home() {
+	<html>
+		<head>
+			<link rel="stylesheet" href="/public/css/styles.css"/>
+		</head>
+		<body class="bg-white">
+			<div class="bg-white py-24">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					@components.Header()
+					@components.RowContainer()
+				</div>
+			</div>
+		</body>
+	</html>
+}
