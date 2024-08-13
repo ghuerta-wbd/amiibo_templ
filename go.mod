@@ -1,4 +1,4 @@
-module github.com/ghuerta-globant/amiibo_templ
+module github.com/ghuerta-wbd/amiibo_templ
 
 go 1.21
 
